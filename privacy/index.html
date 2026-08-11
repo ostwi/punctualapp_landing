@@ -178,7 +178,7 @@ footer{
 
 <main>
   <h1>Privacy <em>policy</em></h1>
-  <p class="updated">Last updated: July 8, 2026</p>
+  <p class="updated">Last updated: August 11, 2026</p>
   <p class="lede">Punctual is a free, open-source macOS menu bar app that shows your upcoming meetings and takes over your screen when one starts. It is built around a simple principle: <strong>your calendar data belongs to you and stays on your Mac.</strong></p>
 
   <h2>What data Punctual accesses</h2>
@@ -202,6 +202,9 @@ footer{
   <h2>Where your data is stored</h2>
   <p>All processing happens <strong>locally on your Mac</strong>. Punctual has no backend servers, and your calendar data is never uploaded, transmitted, or copied anywhere. Authentication tokens (such as a Google OAuth token, if you connect Google Calendar directly) are stored securely on your device and are used only to fetch your calendar data from Google.</p>
 
+  <h2>How your data is protected</h2>
+  <p>Punctual runs inside the <strong>macOS App Sandbox</strong>, with network access as its only entitlement — it cannot read your files, your microphone, or anything else on the system. Google OAuth tokens are stored in the <strong>macOS Keychain</strong>, encrypted at rest by the operating system and readable only by Punctual on your Mac. All communication with Google's APIs uses HTTPS/TLS. Because there is no backend server, no analytics, and no telemetry, there is no copy of your calendar data anywhere to be breached — it exists only in memory on your Mac while the app is running.</p>
+
   <h2>What Punctual shares</h2>
   <p><strong>Nothing.</strong> Punctual does not share, transfer, sell, or disclose your calendar data or any Google user data to any third party. There are no ads, no data brokers, no analytics services, and no telemetry. No humans read your data. The only exceptions would be those permitted by Google's Limited Use policy: with your explicit consent, for security investigations, or where required by law — and because your data never leaves your Mac, even these are unlikely to ever apply.</p>
 
@@ -219,7 +222,7 @@ footer{
   </ul>
 
   <h2>Open source</h2>
-  <p>Punctual is open source under the MIT license. You don't have to take this policy on faith — you can <a href="https://github.com/punctualapp">read the source code</a> and verify exactly how your data is handled.</p>
+  <p>Punctual is open source under the MIT license. You don't have to take this policy on faith — you can <a href="https://github.com/ostwi/punctual">read the source code</a> and verify exactly how your data is handled.</p>
 
   <h2>Children's privacy</h2>
   <p>Punctual is not directed at children under 13 and does not knowingly collect any personal information — from anyone, of any age, because it collects nothing.</p>
@@ -228,7 +231,7 @@ footer{
   <p>If Punctual's data practices ever change, this policy will be updated here first, with a new "Last updated" date above. Material changes will also be noted in the release notes.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy or your data? <a href="https://github.com/punctualapp/punctualapp.github.io/issues">Open an issue on GitHub</a> and we'll get back to you.</p>
+  <p>Questions about this policy or your data? <a href="https://github.com/ostwi/punctual/issues">Open an issue on GitHub</a> and we'll get back to you.</p>
 </main>
 
 <footer>
@@ -239,7 +242,7 @@ footer{
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="/privacy/">Privacy</a>
-    <a href="https://github.com/punctualapp">GitHub</a>
+    <a href="https://github.com/ostwi/punctual">GitHub</a>
   </div>
 </footer>
 
