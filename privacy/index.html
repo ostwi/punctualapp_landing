@@ -178,15 +178,16 @@ footer{
 
 <main>
   <h1>Privacy <em>policy</em></h1>
-  <p class="updated">Last updated: August 11, 2026</p>
+  <p class="updated">Last updated: September 21, 2026</p>
   <p class="lede">Punctual is a free, open-source macOS menu bar app that shows your upcoming meetings and takes over your screen when one starts. It is built around a simple principle: <strong>your calendar data belongs to you and stays on your Mac.</strong></p>
 
   <h2>What data Punctual accesses</h2>
-  <p>To do its job, Punctual reads your calendar events. Depending on how you connect your calendar, that means:</p>
+  <p>To do its job, Punctual reads your calendar events from the <strong>Google Calendar API</strong>, after you sign in with your Google account. It requests two read-only permissions and nothing else:</p>
   <ul>
-    <li><strong>macOS Calendar (EventKit):</strong> events from any account synced to the macOS Calendar app (iCloud, Google, Outlook, CalDAV, and others).</li>
-    <li><strong>Google Calendar API:</strong> if you connect your Google account directly, Punctual requests read-only access to your Google Calendar events.</li>
+    <li><strong>calendar.calendarlist.readonly</strong> — to see which calendars you have;</li>
+    <li><strong>calendar.events.readonly</strong> — to read the events on those calendars.</li>
   </ul>
+  <p>Punctual cannot create, edit, or delete anything in your calendar.</p>
   <p>From your events, Punctual reads only what it needs to display reminders: event titles, start and end times, location, and the event description/notes (to detect meeting links such as Zoom, Google Meet, Microsoft Teams, or Webex URLs).</p>
 
   <h2>How Punctual uses your data</h2>
@@ -200,7 +201,7 @@ footer{
   <p>That's it. Punctual does not use your data for advertising, analytics, profiling, or any purpose unrelated to showing you your meetings. Your data is never used to train artificial-intelligence or machine-learning models.</p>
 
   <h2>Where your data is stored</h2>
-  <p>All processing happens <strong>locally on your Mac</strong>. Punctual has no backend servers, and your calendar data is never uploaded, transmitted, or copied anywhere. Authentication tokens (such as a Google OAuth token, if you connect Google Calendar directly) are stored securely on your device and are used only to fetch your calendar data from Google.</p>
+  <p>All processing happens <strong>locally on your Mac</strong>. Punctual has no backend servers, and your calendar data is never uploaded, transmitted, or copied anywhere. Authentication tokens (your Google OAuth tokens) are stored securely on your device and are used only to fetch your calendar data from Google.</p>
 
   <h2>How your data is protected</h2>
   <p>Punctual runs inside the <strong>macOS App Sandbox</strong>, with network access as its only entitlement — it cannot read your files, your microphone, or anything else on the system. Google OAuth tokens are stored in the <strong>macOS Keychain</strong>, encrypted at rest by the operating system and readable only by Punctual on your Mac. All communication with Google's APIs uses HTTPS/TLS. Because there is no backend server, no analytics, and no telemetry, there is no copy of your calendar data anywhere to be breached — it exists only in memory on your Mac while the app is running.</p>
@@ -217,8 +218,7 @@ footer{
   <p>Punctual keeps no copies of your calendar data beyond what is momentarily needed to render the interface. To remove all data the app can access:</p>
   <ul>
     <li>quit Punctual and delete it from your Applications folder;</li>
-    <li>if you granted macOS calendar access, you can revoke it anytime in <strong>System Settings → Privacy &amp; Security → Calendars</strong>;</li>
-    <li>if you connected Google Calendar directly, you can revoke Punctual's access anytime at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
+    <li>you can revoke Punctual's access anytime at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
   </ul>
 
   <h2>Open source</h2>
@@ -231,7 +231,7 @@ footer{
   <p>If Punctual's data practices ever change, this policy will be updated here first, with a new "Last updated" date above. Material changes will also be noted in the release notes.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy or your data? <a href="https://github.com/ostwi/punctual/issues">Open an issue on GitHub</a> and we'll get back to you.</p>
+  <p>Questions about this policy or your data? Email <a href="mailto:support@punctual-app.com">support@punctual-app.com</a>, or see the <a href="/support/">support page</a>.</p>
 </main>
 
 <footer>
